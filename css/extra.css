@@ -9,6 +9,7 @@ img[alt=YouTubeChannel_Screenshot] { width:250px; border-style:solid; border-wid
 
 .video-wrap {
 	max-width: 480px;
+    margin-top: 20px;
 }
 
 .video-container {
