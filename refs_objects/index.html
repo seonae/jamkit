@@ -1,0 +1,4915 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>기본 오브젝트 - Jamkit for Developer</title>
+      
+      
+      
+        <link rel="canonical" href="https://bookjam.github.io/jamkit/refs_objects/">
+      
+      
+    
+    <meta property="og:url" content="https://bookjam.github.io/jamkit/refs_objects/">
+    <meta property="og:title" content="Jamkit for Developer">
+    <meta property="og:image" content="../assets/images/og.jpg">
+    <meta name="apple-mobile-web-app-title" content="Jamkit for Developer">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-a422ff04cc.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                참조문서 <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        기본 오브젝트
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://bookjam.github.io/jamkit" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          Jamkit for Developer
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="잼킷이란?" href="..">
+      잼킷이란?
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="시작하기" href="../start/">
+      시작하기
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">튜토리얼</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="잼킷 명령어 도구 사용하기" href="../tutorial_jamkit/">
+      잼킷 명령어 도구 사용하기
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="템플릿으로 앱 제작하기" href="../tutorial_templates/">
+      템플릿으로 앱 제작하기
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="레이아웃 다루기" href="../tutorial_layouts/">
+      레이아웃 다루기
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="화면 네비게이션" href="../tutorial_navigation/">
+      화면 네비게이션
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="액션과 이벤트" href="../tutorial_actions/">
+      액션과 이벤트
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="템플릿 변수와 환경변수" href="../tutorial_variables/">
+      템플릿 변수와 환경변수
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="데이터 다루기" href="../tutorial_data/">
+      데이터 다루기
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="입력 폼 처리하기" href="../tutorial_form/">
+      입력 폼 처리하기
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="sbml/sbss 문법" href="../tutorial_sbml/">
+      sbml/sbss 문법
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">템플릿</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="유튜브 템플릿" href="../tmpl_youtube/">
+      유튜브 템플릿
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="페이스북 템플릿" href="../tmpl_facebook/">
+      페이스북 템플릿
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="팟캐스트 템플릿" href="../tmpl_podcast/">
+      팟캐스트 템플릿
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="RSS 템플릿" href="../tmpl_rss/">
+      RSS 템플릿
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">참조문서</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="기본 스타일" href="../refs_styles/">
+      기본 스타일
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="기본 오브젝트" href="./">
+      기본 오브젝트
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="오브젝트 공통" href="#_1">
+                오브젝트 공통
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="이미지 (Image)" href="#image">
+                이미지 (Image)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="포토 (Photo)" href="#photo">
+                포토 (Photo)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="포토플러스 (Photo Plus)" href="#photo-plus">
+                포토플러스 (Photo Plus)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="포토줌 (Photo Zoom)" href="#photo-zoom">
+                포토줌 (Photo Zoom)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="포토스크롤 (Photo Scroll)" href="#photo-scroll">
+                포토스크롤 (Photo Scroll)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="멀티포토 (Multi Photo)" href="#multi-photo">
+                멀티포토 (Multi Photo)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="포토롤 (Photo Roll)" href="#photo-roll">
+                포토롤 (Photo Roll)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="코믹 (Comic)" href="#comic">
+                코믹 (Comic)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="지도 (Map)" href="#map">
+                지도 (Map)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="미니지도 (Mini Map)" href="#mini-map">
+                미니지도 (Mini Map)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="라벨 (Label)" href="#label">
+                라벨 (Label)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="버튼 (Button)" href="#button">
+                버튼 (Button)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="텍스트필드 (Textfield)" href="#textfield">
+                텍스트필드 (Textfield)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="텍스트 입력창 (Text)" href="#text">
+                텍스트 입력창 (Text)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="체크박스 (CheckBox)" href="#checkbox">
+                체크박스 (CheckBox)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="초이스 (Choices)" href="#choices">
+                초이스 (Choices)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="입력 (Input)" href="#input">
+                입력 (Input)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="비디오 (Video)" href="#video">
+                비디오 (Video)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="웹비디오 (Web Video)" href="#web-video">
+                웹비디오 (Web Video)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="유튜브 (YouTube)" href="#youtube">
+                유튜브 (YouTube)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="비메오 (Vimeo)" href="#vimeo">
+                비메오 (Vimeo)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="웹 (Web)" href="#web">
+                웹 (Web)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="PDF 페이지 (PDF Page)" href="#pdf-pdf-page">
+                PDF 페이지 (PDF Page)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="차트 (Chart)" href="#chart">
+                차트 (Chart)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="빈 영역 (Blank)" href="#blank">
+                빈 영역 (Blank)
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="컨테이너 오브젝트" href="../refs_containers/">
+      컨테이너 오브젝트
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="기능성 쇼케이스 오브젝트" href="../refs_showcases/">
+      기능성 쇼케이스 오브젝트
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="컨트롤러" href="../refs_controllers/">
+      컨트롤러
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="테마 색상" href="../refs_themes/">
+      테마 색상
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>기본 오브젝트</h1>
+          
+          <h2 id="_1">오브젝트 공통</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_2">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>오브젝트의 ID. 화면에 나타나는 오브젝트 중 유일한 값이어야 한다.</td>
+</tr>
+<tr>
+<td>group</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>오브젝트의 그룹 ID. 동일한 그룹 ID의 오브젝트들은 하나의 그룹으로 묶이게 된다.</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>Float</td>
+<td>1</td>
+<td></td>
+<td>오브젝트의 알파값. 0일 경우 오브젝트가 투명해진다.</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>Float</td>
+<td>0</td>
+<td></td>
+<td>지정된 값만큼 오브젝트를 회전시킨다. 이 때의 단위는 radian이다. 즉, 180도를 회전시키려면 3.14를 지정하면 된다.</td>
+</tr>
+<tr>
+<td>ignore-touches</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 터치 이벤트를 처리하지 않도록 하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>save-states</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트의 상태를 저장하려면 yes를 지정한다. 이 때, id도 지정되어 있어야 한다.</td>
+</tr>
+<tr>
+<td>content-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>콘텐츠 영역의 배경색.</td>
+</tr>
+<tr>
+<td>content-border-width</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>콘텐츠 영역 보더의 굵기.</td>
+</tr>
+<tr>
+<td>content-border-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>콘텐츠 영역 보더의 색상.</td>
+</tr>
+<tr>
+<td>content-border-radius</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>콘텐츠 영역 보더의 곡면 크기.</td>
+</tr>
+<tr>
+<td>hides-when-activate</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화될 때 숨기려면 yes를 지정함.</td>
+</tr>
+<tr>
+<td>hides-when-pause</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 일시정지할 때 숨기려면 yes를 지정함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">액션</h3>
+<p>N/A</p>
+<h3 id="_4">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-activate</td>
+<td>오브젝트가 활성화될 때 발생함.</td>
+</tr>
+<tr>
+<td>action-when-deactivate</td>
+<td>오브젝트가 정지할 때 발생함.</td>
+</tr>
+<tr>
+<td>action-when-pause</td>
+<td>오브젝트가 일시정지할 때 발생함.</td>
+</tr>
+<tr>
+<td>action-when-resume</td>
+<td>오브젝트가 재활성화될 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image">이미지 (Image)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_5">사용예</h3>
+<pre><code>=object image: filename="image.jpg"
+</code></pre>
+<h3 id="_6">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>mask-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 위에 겹쳐지는 마스크 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다. 마스크 이미지는 정가운데 한점을 중심으로 9-patch로 표현된다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 마스크 이미지와 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fit</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>content-gravity</td>
+<td>left-top / left-bottom / right-top / right-bottom / top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>이미지가 확대 / 축소되어 표현되었을 때, 화면에 나타날 이미지 내의 위치를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">액션</h3>
+<p>N/A</p>
+<h3 id="_8">이벤트</h3>
+<p>N/A</p>
+<h2 id="photo">포토 (Photo)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_9">사용예</h3>
+<pre><code>=object photo: filename="photo.jpg"
+</code></pre>
+<h3 id="_10">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>hidden-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>뒤로 숨은 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다. dissolving이 yes인 경우, 0.4초 뒤에 이미지가 사라지고 뒤로 숨은 이미지가 드러난다.</td>
+</tr>
+<tr>
+<td>mask-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 위에 겹쳐지는 마스크 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다. 마스크 이미지는 정가운데 한점을 중심으로 9-patch로 표현된다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 마스크 이미지와 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fit</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>actual-mode</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>actual-mode를 yes로 지정하면 이미지가 오브젝트의 크기보다 작을 경우 scale-mode에 따라 이미지를 확대할 필요가 있을 때 이미지의 원본 크기보다 커질 수 없다.</td>
+</tr>
+<tr>
+<td>content-gravity</td>
+<td>left-top / left-bottom / right-top / right-bottom / top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>이미지가 확대 / 축소되어 표현되었을 때, 화면에 보여질 이미지의 위치를 지정한다.</td>
+</tr>
+<tr>
+<td>half-mode</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 반으로 나눠 절반 만을 표현하려면 yes로 설정한다. 표현될 이미지의 부분은 half-side로 지정할 수 있다.</td>
+</tr>
+<tr>
+<td>half-side</td>
+<td>top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>half-mode가 yes인 경우, 이미지가 표현될 부분의 위치를 지정한다</td>
+</tr>
+<tr>
+<td>floating</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>floating을 yes로 지정하면 이미지가 둥둥 떠다니는 애니메이션을 반복한다.</td>
+</tr>
+<tr>
+<td>dissolving</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>dissolving을 yes로 지정하면, 오브젝트가 홀성화된지 0.4초 후에 뒤로 숨겨놓았던 이미지를 화면에 나타낸다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">액션</h3>
+<p>N/A</p>
+<h3 id="_12">이벤트</h3>
+<p>N/A</p>
+<h2 id="photo-plus">포토플러스 (Photo Plus)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_13">사용예</h3>
+<pre><code>=object photoplus: filename="photo.jpg"
+</code></pre>
+<h3 id="_14">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>maximize-scale-mode</td>
+<td>fill / fit</td>
+<td>fit</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>content-gravity</td>
+<td>left-top / left-bottom / right-top / right-bottom / top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>이미지가 확대 / 축소되어 표현되었을 때, 화면에 보여질 이미지의 위치를 지정한다.</td>
+</tr>
+<tr>
+<td>half-mode</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 반으로 나눠 절반 만을 표현하려면 yes로 설정한다. 표현될 이미지의 부분은 half-side로 지정할 수 있다.</td>
+</tr>
+<tr>
+<td>half-side</td>
+<td>top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>half-mode가 yes인 경우, 이미지가 표현될 부분의 위치를 지정한다.</td>
+</tr>
+<tr>
+<td>shadow-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>이미지 그림자 효과에 사용될 색상.</td>
+</tr>
+<tr>
+<td>dim-color</td>
+<td>Color</td>
+<td>#ffffff</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우 이미지 주변 배경에 사용될 색상.</td>
+</tr>
+<tr>
+<td>photo-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>photo-hidden을 yes로 지정하면 이미지를 표시하지 않는다. 전체화면으로 커져야 하는 경우에는 무시된다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">액션</h3>
+<p>N/A</p>
+<h3 id="_16">이벤트</h3>
+<p>N/A</p>
+<h2 id="photo-zoom">포토줌 (Photo Zoom)</h2>
+<ul>
+<li>지원 플랫폼: iOS</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_17">사용예</h3>
+<pre><code>=object photozoom: filename="photo.jpg"
+</code></pre>
+<h3 id="_18">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>maximize-scale-mode</td>
+<td>fill / fit</td>
+<td>fit</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>content-gravity</td>
+<td>left-top / left-bottom / right-top / right-bottom / top / right / bottom / left / center</td>
+<td>center</td>
+<td></td>
+<td>이미지가 확대 / 축소되어 표현되었을 때, 화면에 보여질 이미지의 위치를 지정한다.</td>
+</tr>
+<tr>
+<td>shadow-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>이미지 그림자 효과에 사용될 색상.</td>
+</tr>
+<tr>
+<td>dim-color</td>
+<td>Color</td>
+<td>#ffffff</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우 이미지 주변 배경에 사용될 색상.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_19">액션</h3>
+<p>N/A</p>
+<h3 id="_20">이벤트</h3>
+<p>N/A</p>
+<h2 id="photo-scroll">포토스크롤 (Photo Scroll)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_21">사용예</h3>
+<pre><code>=object photoscroll: filename="photo.jpg"
+</code></pre>
+<h3 id="_22">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드. fill 또는 fit을 지정할 수 있다.</td>
+</tr>
+<tr>
+<td>max-scale</td>
+<td>Float</td>
+<td>3</td>
+<td></td>
+<td>이미지가 확대될 수 있는 최대 비율.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_23">액션</h3>
+<p>N/A</p>
+<h3 id="_24">이벤트</h3>
+<p>N/A</p>
+<h2 id="multi-photo">멀티포토 (Multi Photo)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_25">사용예</h3>
+<pre><code>=object multiphoto: photo-1="photo.jpg;캡션입니다.;서브캡션입니다.", photo-2="photo.jpg;캡션입니다.;서브캡션입니다.", photo-3="photo.jpg;캡션입니다.;서브캡션입니다."
+</code></pre>
+<h3 id="_26">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>photo-n</td>
+<td>"파일명;캡션;서브캡션"</td>
+<td></td>
+<td></td>
+<td>이미지 파일명과 캡션을 하나로 묶어 이미지를 지정함. 이미지가 여러 장일 때에는 photo-1="...", photo-2="..." 등으로 지정.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>dim-color</td>
+<td>Color</td>
+<td>#ffffff</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우 이미지 주변 배경에 사용될 색상.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td></td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_27">액션</h3>
+<p>N/A</p>
+<h3 id="_28">이벤트</h3>
+<p>N/A</p>
+<h2 id="photo-roll">포토롤 (Photo Roll)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_29">사용예</h3>
+<pre><code>=object photoroll: photo-1="photo.jpg;메인캡션;서브캡션", photo-2="photo.jpg;메인캡션;서브캡션", photo-3="photo.jpg;메인캡션;서브캡션"
+</code></pre>
+<h3 id="_30">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>photo-n</td>
+<td>"파일명;캡션;서브캡션"</td>
+<td></td>
+<td></td>
+<td>이미지 파일명과 캡션을 하나로 묶어 이미지를 지정함. 이미지가 여러 장일 때에는 photo-1="...", photo-2="..." 등으로 지정.</td>
+</tr>
+<tr>
+<td>photo-width</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>이미지 썸네일 한장의 너비. 0으로 지정한 경우, 자동으로 계산한다.</td>
+</tr>
+<tr>
+<td>photo-spacing</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>이미지 썸네일 사이의 간격.</td>
+</tr>
+<tr>
+<td>maximize-scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>dim-color</td>
+<td>Color</td>
+<td>#ffffff</td>
+<td></td>
+<td>이미지가 전체화면으로 커졌을 경우 이미지 주변 배경에 사용될 색상.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_31">액션</h3>
+<p>N/A</p>
+<h3 id="_32">이벤트</h3>
+<p>N/A</p>
+<h2 id="comic">코믹 (Comic)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_33">사용예</h3>
+<pre><code>=object comic: image="comic.jpg"
+</code></pre>
+<h3 id="_34">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>zoomable</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>핀치 액션으로 이미지의 확대 / 축소가 가능하게 하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>gutter-align</td>
+<td>left / right / none</td>
+<td>none</td>
+<td></td>
+<td>거터 이미지의 위치를 지정한다.</td>
+</tr>
+<tr>
+<td>gutter-hidden</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>거터 이미지를 보이게 하려면 no를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_35">액션</h3>
+<p>N/A</p>
+<h3 id="_36">이벤트</h3>
+<p>N/A</p>
+<h2 id="map">지도 (Map)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_37">사용예</h3>
+<pre><code>=object map: latitude="37.566535", longitude="126.977969", zoom-level="17"
+</code></pre>
+<h3 id="_38">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latitude</td>
+<td>Float</td>
+<td>37.566535</td>
+<td></td>
+<td>지도의 위도.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Float</td>
+<td>126.977969</td>
+<td></td>
+<td>지도의 경도.</td>
+</tr>
+<tr>
+<td>zoom-level</td>
+<td>Float</td>
+<td>17</td>
+<td></td>
+<td>지도의 확대 / 축소 레벨.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>장소 마크에 표시될 제목.</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>장소 마크에 표시될 부제목.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>이미지의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_39">액션</h3>
+<p>N/A</p>
+<h3 id="_40">이벤트</h3>
+<p>N/A</p>
+<h2 id="mini-map">미니지도 (Mini Map)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_41">사용예</h3>
+<pre><code>=object minimap: latitude="37.566535", longitude="126.977969", zoom-level="17"
+</code></pre>
+<h3 id="_42">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latitude</td>
+<td>Float</td>
+<td>37.566535</td>
+<td></td>
+<td>지도의 위도.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Float</td>
+<td>126.977969</td>
+<td></td>
+<td>지도의 경도.</td>
+</tr>
+<tr>
+<td>zoom-level</td>
+<td>Float</td>
+<td>17</td>
+<td></td>
+<td>지도의 확대 / 축소 레벨.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>장소 마크에 표시될 제목.</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>장소 마크에 표시될 부제목.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_43">액션</h3>
+<p>N/A</p>
+<h3 id="_44">이벤트</h3>
+<p>N/A</p>
+<h2 id="label">라벨 (Label)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_45">사용예</h3>
+<pre><code>=object label: text="라벨"
+</code></pre>
+<h3 id="_46">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>라벨 텍스트.</td>
+</tr>
+<tr>
+<td>waiting-text</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>라벨 텍스트가 지정될 때까지 표시될 대기용 텍스트.</td>
+</tr>
+<tr>
+<td>font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>라벨 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>라벨 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>라벨 텍스트의 정렬 방식.</td>
+</tr>
+<tr>
+<td>line-break-mode</td>
+<td>word-wrap / character-wrap / tail-truncation / middle-truncation / head-truncation</td>
+<td>character-wrap</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘었을 때 줄을 나누는 방법.</td>
+</tr>
+<tr>
+<td>number-of-lines</td>
+<td>Integer</td>
+<td>1</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘게 되었을 경우 최대 허용할 줄의 수. 0을 지정하면 무제한 허용.</td>
+</tr>
+<tr>
+<td>text-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>라벨 텍스트의 색상.</td>
+</tr>
+<tr>
+<td>shadow-color</td>
+<td>Color</td>
+<td>#cccccc</td>
+<td></td>
+<td>라벨 텍스트 그림자 효과의 색상.</td>
+</tr>
+<tr>
+<td>shadow-offset</td>
+<td>Float</td>
+<td>0</td>
+<td></td>
+<td>라벨 텍스트 그림자 효과의 위치. 양수를 지정하면 텍스트의 우하단 방향으로 그림자가 생기며, 음수를 지정하면 텍스트의 좌상단 방향으로 그림자가 생김.</td>
+</tr>
+<tr>
+<td>content-padding</td>
+<td>Side</td>
+<td>"0 0 0 0"</td>
+<td>dp, em, layout의 상대값</td>
+<td>라벨 텍스트 영역의 패딩값. 축약형 사용 가능. 예) "1em", "1em 20dp", "1em 1.5em 0 1.2em"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_47">액션</h3>
+<p>N/A</p>
+<h3 id="_48">이벤트</h3>
+<p>N/A</p>
+<h2 id="button">버튼 (Button)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_49">사용예</h3>
+<pre><code>=object button: label="클릭"
+=object button: image="click.jpg", highlight-image="clicked.jpg"
+</code></pre>
+<h3 id="_50">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>selected-label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>선택된 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>disable-label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비활성 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>highlight-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>하이라이트 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>selected-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>선택된 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>disable-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비활성 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>mask-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>모든 상태의 이미지 위에 겹쳐지는 마스크 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다. 마스크 이미지는 정가운데 한점을 중심으로 9-patch로 표현된다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 마스크 이미지와 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>label-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>라벨 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>label-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>label-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>라벨 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>label-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>label-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>label-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>label-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>라벨 텍스트의 정렬 방식.</td>
+</tr>
+<tr>
+<td>line-break-mode</td>
+<td>word-wrap / character-wrap / tail-truncation / middle-truncation / head-truncation</td>
+<td>character-wrap</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘었을 때 줄을 나누는 방법.</td>
+</tr>
+<tr>
+<td>number-of-lines</td>
+<td>Integer</td>
+<td>1</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘게 되었을 경우 최대 허용할 줄의 수. 0을 지정하면 무제한 허용.</td>
+</tr>
+<tr>
+<td>label-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>라벨 텍스트를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>보통 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>highlight-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>하이라이트 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>selected-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>선택된 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>disable-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>비활성 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>highlight-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>하이라이트 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>selected-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>선택된 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>disable-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>비활성 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>content-padding</td>
+<td>Side</td>
+<td>"0 0 0 0"</td>
+<td>dp, em, layout의 상대값</td>
+<td>라벨 텍스트 영역의 패딩값. 축약형 사용 가능. 예) "1em", "1em 20dp", "1em 1.5em 0 1.2em"</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>버튼 이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>버튼을 비활성 상태로 만들려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>버튼을 선택된 상태로 만들려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>hides-when-disabled</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>버튼이 비활성화될 때 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>disable-when-selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>버튼이 선택될 때 비활성화 하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>hides-when-selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>버튼이 선택될 때 숨기려면 yes를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_51">액션</h3>
+<p>N/A</p>
+<h3 id="_52">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>버튼을 눌렀을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="textfield">텍스트필드 (Textfield)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_53">사용예</h3>
+<pre><code>=object textfield: placeholder="여기에 입력하세요."
+</code></pre>
+<h3 id="_54">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>텍스트 필드에 채워질 입력 텍스트</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>텍스트 입력 힌트. 입력이 시작되면 사라진다.</td>
+</tr>
+<tr>
+<td>font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>입력 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>입력 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>입력 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>입력 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>입력 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>입력 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>입력 텍스트의 정렬 방식.</td>
+</tr>
+<tr>
+<td>text-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>입력 텍스트의 색상.</td>
+</tr>
+<tr>
+<td>disable-text-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>비활성 상태의 입력 텍스트 색상.</td>
+</tr>
+<tr>
+<td>placeholder-color</td>
+<td>Color</td>
+<td>#646464</td>
+<td></td>
+<td>텍스트 입력 힌트의 색상. (현재 iOS는 지원하지 않는다.)</td>
+</tr>
+<tr>
+<td>editable</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>입력이 불가능한 상태로 만들려면 no를 지정한다.</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>입력 보안을 설정하려면 yes를 지정한다. 비밀번호 입력 등에서 사용할 수 있다.</td>
+</tr>
+<tr>
+<td>keyboard-type</td>
+<td>default / email / url / number / decimal / phone / name-phone / twitter / alphabet</td>
+<td>default</td>
+<td></td>
+<td>텍스트 입력 시에 사용할 키보드 종류.</td>
+</tr>
+<tr>
+<td>return-key-type</td>
+<td>default / next / done / join / go / search / send</td>
+<td>default</td>
+<td></td>
+<td>키보드의 리턴키를 상황에 맞는 단어로 변경하기 위해서 지정한다.</td>
+</tr>
+<tr>
+<td>auto-capitalization-type</td>
+<td>word / all / none</td>
+<td>word</td>
+<td>텍스트 입력 시에 적용될 자동 대문자 타입.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_55">액션</h3>
+<p>N/A</p>
+<h3 id="_56">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>텍스트를 입력한 후 리턴키를 눌렀을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="text">텍스트 입력창 (Text)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_57">사용예</h3>
+<pre><code>=object text: text="여기에 입력하세요."
+</code></pre>
+<h3 id="_58">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>텍스트 입력창에 채워질 입력 텍스트</td>
+</tr>
+<tr>
+<td>font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>입력 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>입력 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>입력 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>입력 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>입력 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>입력 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>text-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>입력 텍스트의 색상.</td>
+</tr>
+<tr>
+<td>editable</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>입력이 불가능한 상태로 만들려면 no를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_59">액션</h3>
+<p>N/A</p>
+<h3 id="_60">이벤트</h3>
+<p>N/A</p>
+<h2 id="checkbox">체크박스 (CheckBox)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_61">사용예</h3>
+<pre><code>=object checkbox: image="normal.jpg", selected-image="selected.jpg"
+</code></pre>
+<h3 id="_62">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>selected-label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>선택된 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>disable-label</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비활성 상태일 때의 라벨 텍스트.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 이미지의 URL. URL로 부터 이미지를 다운로드한다. 이 때, image-downloadable을 yes로 설정해야 한다.</td>
+</tr>
+<tr>
+<td>highlight-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>하이라이트 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>selected-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>선택된 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>disable-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비활성 상태일 때의 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>answer-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>체크박스의 정답을 나타낼 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>default-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>이미지가 아직 로드되어 있지 않을 때 나타낼 기본 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>content-background-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>보통 상태일 때의 배경 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>highlight-background-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>하이라이트 상태일 때의 배경 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>selected-background-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>선택된 상태일 때의 배경 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>disable-background-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비활성 상태일 때의 배경 이미지 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다. 마스크 이미지와 기본 이미지는 다운로드 할 수 없다.</td>
+</tr>
+<tr>
+<td>label-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>라벨 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>label-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>label-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>라벨 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>label-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>label-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>label-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>라벨 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>label-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>라벨 텍스트의 정렬 방식.</td>
+</tr>
+<tr>
+<td>line-break-mode</td>
+<td>word-wrap / character-wrap / tail-truncation / middle-truncation / head-truncation</td>
+<td>character-wrap</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘었을 때 줄을 나누는 방법.</td>
+</tr>
+<tr>
+<td>number-of-lines</td>
+<td>Integer</td>
+<td>1</td>
+<td></td>
+<td>라벨 텍스트가 여러 줄로 나뉘게 되었을 경우 최대 허용할 줄의 수. 0을 지정하면 무제한 허용.</td>
+</tr>
+<tr>
+<td>label-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>라벨 텍스트를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>보통 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>highlight-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>하이라이트 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>selected-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>선택된 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>disable-label-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>비활성 상태일 때의 라벨 텍스트 색상.</td>
+</tr>
+<tr>
+<td>highlight-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>하이라이트 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>selected-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>선택된 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>disable-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>비활성 상태일 때의 배경색.</td>
+</tr>
+<tr>
+<td>content-padding</td>
+<td>Side</td>
+<td>"0 0 0 0"</td>
+<td>dp, em, layout의 상대값</td>
+<td>라벨 텍스트 영역의 패딩값. 축약형 사용 가능. 예) "1em", "1em 20dp", "1em 1.5em 0 1.2em"</td>
+</tr>
+<tr>
+<td>content-spacing</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>이미지와 라벨 텍스트 사이의 간격.</td>
+</tr>
+<tr>
+<td>select-mode</td>
+<td>single / multiple / none</td>
+<td>none</td>
+<td></td>
+<td>그룹 체크박스의 선택 모드.</td>
+</tr>
+<tr>
+<td>scale-mode</td>
+<td>fill / fit</td>
+<td>fill</td>
+<td></td>
+<td>체크박스 이미지가 오브젝트의 크기에 맞지 않을 경우에 사용될 확대 / 축소 모드.</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>체크박스를 비활성화 상태로 만들려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>체크박스를 선택된 상태로 만들려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>hides-when-disabled</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>체크박스가 비활성화될 때 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>disable-when-selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>체크박스가 선택될 때 비활성화 하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>hides-when-selected</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>체크박스가 선택될 때 숨기려면 yes를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_63">액션</h3>
+<p>N/A</p>
+<h3 id="_64">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>버튼을 눌렀을 때 발생함.</td>
+</tr>
+<tr>
+<td>action-when-selected</td>
+<td>버튼을 눌러 선택된 상태가 되었을 때 발생함. action과 중복으로 발생.</td>
+</tr>
+<tr>
+<td>action-when-deselected</td>
+<td>버튼을 눌러 선택된 상태가 해제 되었을 때 발생함. action과 중복으로 발생.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="choices">초이스 (Choices)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_65">사용예</h3>
+<pre><code>=object choices: choice-1="(1);보기 1", choice-2="(2);보기 2", choice-3="(3);보기 3", choice-image="selected.jpg"
+</code></pre>
+<h3 id="_66">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>choice-n</td>
+<td>"심볼;보기"</td>
+<td></td>
+<td></td>
+<td>심볼과 보기 텍스트를 하나로 묶어 선택항을 지정함. 선택항이 여러 개일 때에는 choice-1="...", choice-2="..." 등으로 지정.</td>
+</tr>
+<tr>
+<td>blank-text</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>빈칸을 표현할 텍스트. <strong>_</strong> 등을 사용할 수 있다.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>문항 번호.</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>정답인 보기 번호.</td>
+</tr>
+<tr>
+<td>check-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>보기를 선택할 때 심볼 위에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>answer-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>정답 확인 시 심볼 위에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>심볼 및 보기 텍스트의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>심볼 및 보기 텍스트의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>심볼 및 보기 텍스트의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>심볼 및 보기 텍스트의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>심볼 및 보기 텍스트의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>심볼 및 보기 텍스트의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>line-break-mode</td>
+<td>word-wrap / character-wrap / tail-truncation / middle-truncation / head-truncation</td>
+<td>character-wrap</td>
+<td></td>
+<td>보기 텍스트가 여러 줄로 나뉘었을 때 줄을 나누는 방법.</td>
+</tr>
+<tr>
+<td>paragraph-spacing</td>
+<td>Float</td>
+<td>0</td>
+<td></td>
+<td>보기 항목 간의 문단 간격.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_67">액션</h3>
+<p>N/A</p>
+<h3 id="_68">이벤트</h3>
+<p>N/A</p>
+<h2 id="input">입력 (Input)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_69">사용예</h3>
+<pre><code>=object input: id="key", value="value"
+</code></pre>
+<h3 id="_70">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_71">액션</h3>
+<p>N/A</p>
+<h3 id="_72">이벤트</h3>
+<p>N/A</p>
+<h2 id="video">비디오 (Video)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_73">사용예</h3>
+<pre><code>=object video: filename="sample.mp4"
+=object video: url="http://www.video.org / sample.mp4"
+</code></pre>
+<h3 id="_74">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비디오 파일명. 파일은 Videos 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>비디오의 URL.</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화될 때 자동으로 비디오를 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오를 반복하여 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>control-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 제어 창을 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>preview-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비디오가 재생되기 전에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_75">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td></td>
+<td>비디오를 재생함.</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>비디오를 일시 정지함.</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>비디오를 정지함.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time={재생할 위치의 시간 값, 00:00:00 형식}</td>
+<td>비디오 재생 위치를 변경함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_76">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-finished</td>
+<td>비디오 재생이 완료되었을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-video">웹비디오 (Web Video)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_77">사용예</h3>
+<pre><code>=object webvideo: url="https: /  / embed-ssl.ted.com / talks / shivani_siroya_a_smart_loan_for_people_with_no_credit_history_yet.html"
+</code></pre>
+<h3 id="_78">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>비디오의 URL.</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화될 때 자동으로 비디오를 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오를 반복하여 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>control-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 제어 창을 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>info-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 정보를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>preview-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비디오가 재생되기 전에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_79">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td></td>
+<td>비디오를 재생함.</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>비디오를 일시 정지함.</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>비디오를 정지함.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time={재생할 위치의 시간 값, 00:00:00 형식}</td>
+<td>비디오 재생 위치를 변경함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_80">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-finished</td>
+<td>비디오 재생이 완료되었을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="youtube">유튜브 (YouTube)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_81">사용예</h3>
+<pre><code>=object youtube: video-id="9bZkp7q19f0"
+</code></pre>
+<h3 id="_82">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>video-id</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>유튜브 비디오의 ID.</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화될 때 자동으로 비디오를 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오를 반복하여 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>plays-inline</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>비디오 재생시 전체 화면으로 확대하려면 no를 지정한다.</td>
+</tr>
+<tr>
+<td>control-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 제어 창을 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>info-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 정보를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>shows-related</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>비디오의 재생이 끝난 뒤, 화면에 관련 동영상이 나타나지 않게 하려면 no를 지정한다.</td>
+</tr>
+<tr>
+<td>preview-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비디오가 재생되기 전에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_83">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td></td>
+<td>비디오를 재생함.</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>비디오를 일시 정지함.</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>비디오를 정지함.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time={재생할 위치의 시간 값, 00:00:00 형식}</td>
+<td>비디오 재생 위치를 변경함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_84">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-finished</td>
+<td>비디오 재생이 완료되었을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vimeo">비메오 (Vimeo)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_85">사용예</h3>
+<pre><code>=object vimeo: video-id="176434092"
+</code></pre>
+<h3 id="_86">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>video-id</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비메오 비디오의 ID.</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화될 때 자동으로 비디오를 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오를 반복하여 재생하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>control-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 제어 창을 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>info-hidden</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>비디오 정보를 숨기려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>preview-image</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>비디오가 재생되기 전에 나타날 이미지의 파일명. 파일은 Images 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>image-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>이미지를 외부에서 다운로드할 수 있을 때 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 캡션.</td>
+</tr>
+<tr>
+<td>subcaption</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>비디오의 서브 캡션.</td>
+</tr>
+<tr>
+<td>caption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>caption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>caption-font-size</td>
+<td>Float</td>
+<td>0.8</td>
+<td>em</td>
+<td>캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>caption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>caption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>caption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>subcaption-font</td>
+<td>"[weight] [style] size family"</td>
+<td></td>
+<td></td>
+<td>서브 캡션의 글꼴. weight, style 은 생략 가능. 예) "bold 1.2em sans-serif", "0.7 monospace"</td>
+</tr>
+<tr>
+<td>subcaption-font-family</td>
+<td>serif / sans-serif / monospace / 글꼴 이름</td>
+<td>serif</td>
+<td></td>
+<td>서브 캡션의 글꼴 종류. 콤마(,)로 구분하여 여러 값 입력 가능. 예) "맑은 고딕, 굴림, sans-serif"</td>
+</tr>
+<tr>
+<td>subcaption-font-size</td>
+<td>Float</td>
+<td>0.6</td>
+<td>em</td>
+<td>서브 캡션의 글꼴 크기.</td>
+</tr>
+<tr>
+<td>subcaption-font-weight</td>
+<td>normal / bold</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 가중치.</td>
+</tr>
+<tr>
+<td>subcaption-font-style</td>
+<td>normal / italic</td>
+<td>normal</td>
+<td></td>
+<td>서브 캡션의 글꼴 스타일.</td>
+</tr>
+<tr>
+<td>subcaption-font-no-scale</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>서브 캡션의 글꼴 크기가 사용자의 글꼴 크기 설정에 영향을 받지 않으려면 yes로 지정한다.</td>
+</tr>
+<tr>
+<td>caption-align</td>
+<td>left / right / center</td>
+<td>left</td>
+<td></td>
+<td>캡션과 서브 캡션의 텍스트 정렬 방식.</td>
+</tr>
+<tr>
+<td>caption-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>캡션 영역의 높이.</td>
+</tr>
+<tr>
+<td>inner-caption</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>캡션 영역을 이미지 영역 안으로 배치하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>caption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>캡션의 글자색.</td>
+</tr>
+<tr>
+<td>subcaption-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td></td>
+<td>서브 캡션의 글자색.</td>
+</tr>
+<tr>
+<td>caption-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>캡션 영역의 배경색.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_87">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td></td>
+<td>비디오를 재생함.</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>비디오를 일시 정지함.</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>비디오를 정지함.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time={재생할 위치의 시간 값, 00:00:00 형식}</td>
+<td>비디오 재생 위치를 변경함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_88">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-finished</td>
+<td>비디오 재생이 완료되었을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web">웹 (Web)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_89">사용예</h3>
+<pre><code>=object web: url="http://m.naver.com"
+</code></pre>
+<h3 id="_90">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>웹페이지 파일명. 파일은 루트 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>웹페이지의 URL.</td>
+</tr>
+<tr>
+<td>bounces</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>웹페이지의 바운스 효과를 허용하지 않으려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>loads-when-appear</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>오브젝트가 활성화되지 않더라도 웹페이지를 즉시 로드하려면 yes를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_91">액션</h3>
+<h3 id="_92">이벤트</h3>
+<h2 id="pdf-pdf-page">PDF 페이지 (PDF Page)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_93">사용예</h3>
+<pre><code>=object pdf: url="http://www.pdf.org / sample.pdf", page=1
+</code></pre>
+<h3 id="_94">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>pdf의 파일명. 파일은 루트 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>pdf 파일의 URL.</td>
+</tr>
+<tr>
+<td>page</td>
+<td>Integer</td>
+<td>1</td>
+<td></td>
+<td>pdf의 페이지 번호.</td>
+</tr>
+<tr>
+<td>bounces</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>pdf 페이지의 바운스 효과를 허용하지 않으려면 yes를 지정한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_95">액션</h3>
+<p>N/A</p>
+<h3 id="_96">이벤트</h3>
+<p>N/A</p>
+<h2 id="chart">차트 (Chart)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_97">사용예</h3>
+<pre><code>=object chart: filename="chart.json"
+</code></pre>
+<h3 id="_98">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>차트 데이터의 파일명. 파일은 Texts 디렉토리에 들어있어야 한다. 파일 포맷은 json이며 데이터에 대한 자세한 설명은 <a href="http://www.chartjs.org/docs">http://www.chartjs.org/docs</a>를 참조한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_99">액션</h3>
+<p>N/A</p>
+<h3 id="_100">이벤트</h3>
+<p>N/A</p>
+<h2 id="blank">빈 영역 (Blank)</h2>
+<ul>
+<li>지원 플랫폼: iOS, 안드로이드</li>
+<li>잼킷 버전: 1.0</li>
+</ul>
+<h3 id="_101">사용예</h3>
+<pre><code>=object blank: color="#ff0"
+</code></pre>
+<h3 id="_102">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>빈 영역을 채울 색상.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_103">액션</h3>
+<p>N/A</p>
+<h3 id="_104">이벤트</h3>
+<p>N/A</p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../refs_styles/" title="기본 스타일">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                기본 스타일
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../refs_containers/" title="컨테이너 오브젝트">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                컨테이너 오브젝트
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
+        ga('create', 'UA-30027224-9', 'bookjam.github.io');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>
