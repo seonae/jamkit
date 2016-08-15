@@ -410,7 +410,7 @@
             <h1>컨테이너 오브젝트</h1>
           
           <h2 id="panes">페인(Panes) 오브젝트</h2>
-<p>페인(Panes) 오브젝트는 pane이라 부르는 페이지를 여러 개 포함할 수 있는 콘테이너 오브젝트이다. 각 pane의 크기는 오브젝트의 크기와 동일하며, pane의 내용은 sbml로 표현한다. pane 간의 이동은 가로 스크롤이나 네비게이션 바를 이용한다. 네비게이션 바는 오브젝트 상단이나 하단, 혹은 좌우에 배치할 수 있으며, 네비게이션 바에는 각 pane마다 대응되는 셀(cell)이 있어서 해당 셀을 선택하면 이와 대응되는 pane이 화면에 나타난다. 네비게이션의 셀의 내용은 sbml로 표현한다. 페인 오브젝트는 헤더(header)를 포함할 수 있으며 헤더의 내용은 sbml로 표현한다.</p>
+<p>페인(Panes) 오브젝트는 pane이라 부르는 페이지를 여러 개 포함할 수 있는 콘테이너 오브젝트이다. 각 pane의 크기는 오브젝트의 크기와 동일하며, pane의 내용은 sbml로 표현한다. pane 간의 이동은 가로 스크롤이나 네비게이션 바를 이용한다. 네비게이션 바는 오브젝트 상단이나 하단, 혹은 좌우에 배치할 수 있으며, 네비게이션 바에는 각 pane마다 대응되는 셀(cell)이 있어서 해당 셀을 선택하면 이와 대응되는 pane이 화면에 나타난다. 네비게이션의 셀의 내용은 sbml로 표현한다. 페인 오브젝트는 헤더(header)와 툴바(toolbar)를 포함할 수 있으며 각각의 내용은 sbml로 표현한다.</p>
 <ul>
 <li>지원 플랫폼: iOS, 안드로이드</li>
 <li>잼킷 버전: 1.0</li>
@@ -431,32 +431,123 @@
 </thead>
 <tbody>
 <tr>
+<td>name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 이름. 로컬 데이터베이스의 panes 테이블에서 panes의 이름이 name인 항목을 가리킨다.</td>
+</tr>
+<tr>
 <td>alternate-name</td>
 <td>String</td>
 <td>None</td>
 <td></td>
-<td>sbml 파일을 선택할 때 name 대신 사용할 가상의 이름.</td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+<tr>
+<td>focused-pane</td>
+<td>String 혹은 Integer</td>
+<td>None</td>
+<td></td>
+<td>로드 시에 선택할 pane의 항목. displayUnit 값이나 pane의 index 값을 지정할 수 있다.</td>
 </tr>
 <tr>
 <td>has-header</td>
 <td>Boolean</td>
 <td>no</td>
 <td></td>
-<td>헤더 영역을 표시하려면 yes를 지정함.</td>
+<td>헤더를 포함하려면 yes를 지정함.</td>
 </tr>
 <tr>
 <td>header-display-unit</td>
 <td>String</td>
 <td>None</td>
 <td></td>
-<td>헤더 영역에 사용할 데이터 항목.</td>
+<td>헤더에 사용할 데이터의 displayUnit 항목.</td>
+</tr>
+<tr>
+<td>header-width</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>헤더의 너비. 0이면 자동계산.</td>
+</tr>
+<tr>
+<td>header-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>헤더의 높이. 0이면 자동계산.</td>
+</tr>
+<tr>
+<td>has-toolbar</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>툴바를 포함하려면 yes를 지정함.</td>
+</tr>
+<tr>
+<td>toolbar-display-unit</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>툴바에 사용할 데이터의 displayUnit 항목.</td>
+</tr>
+<tr>
+<td>toolbar-height</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>툴바의 높이. 0이면 자동계산.</td>
+</tr>
+<tr>
+<td>toolbar-position</td>
+<td>top / bottom</td>
+<td>bottom</td>
+<td></td>
+<td>툴바의 위치.</td>
+</tr>
+<tr>
+<td>number-of-panes</td>
+<td>Integer</td>
+<td>0</td>
+<td></td>
+<td>pane의 갯수. name으로 데이터를 지정하지 않을 때 사용함.</td>
+</tr>
+<tr>
+<td>pane-display-unit</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>name으로 데이터를 지정하지 않을 때 사용할 데이터의 displayUnit 항목.</td>
 </tr>
 <tr>
 <td>has-navibar</td>
 <td>Boolean</td>
 <td>no</td>
 <td></td>
-<td>네비게이션 바를 표시하려면 yes를 지정함.</td>
+<td>네비게이션 바를 포함하려면 yes를 지정함.</td>
 </tr>
 <tr>
 <td>navibar-cell-size</td>
@@ -481,7 +572,7 @@
 </tr>
 <tr>
 <td>navibar-position</td>
-<td>top/bottom/left/right</td>
+<td>top / bottom / left / right</td>
 <td>top</td>
 <td></td>
 <td>네비게이션 바의 위치.</td>
@@ -491,21 +582,28 @@
 <td>Boolean</td>
 <td>no</td>
 <td></td>
-<td>네비게이션 바 내의 셀들을 가운데 정렬을 하려면 yes를 지정함. 이 때, 선택되어 있는 셀을 기준으로 가운데 정렬을 한다.</td>
+<td>네비게이션 바 내의 셀들을 가운데로 정렬 하려면 yes를 지정함. 이 때, 선택되어 있는 셀을 기준으로 가운데 정렬을 한다.</td>
+</tr>
+<tr>
+<td>navibar-background-color</td>
+<td>Color</td>
+<td>투명</td>
+<td></td>
+<td>네비게이션 바의 배경색.</td>
 </tr>
 <tr>
 <td>single-mode</td>
 <td>Boolean</td>
 <td>no</td>
 <td></td>
-<td>Pane 영역이 싱글 모드로 동작하려면 yes를 지정함. 싱글 모드로 동작하면 스크롤을 통한 pane 간의 이동이 불가하며, 네비게이션 바를 통해 이동을 해야 한다.</td>
+<td>pane 영역이 싱글 모드로 동작하려면 yes를 지정함. 싱글 모드로 동작하면 스크롤을 통한 pane 간의 이동이 불가하며, 네비게이션 바를 통해 이동을 해야 한다.</td>
 </tr>
 <tr>
 <td>weekday-mode</td>
 <td>Boolean</td>
 <td>no</td>
 <td></td>
-<td>pane 데이터가 요일별 구성으로 동작하려면 yes를 지정함. 요일별 구성을 적용하면 해당 요일에 따라 첫 시작 위치가 결정된다.</td>
+<td>pane 데이터가 요일별 구성으로 동작하려면 yes를 지정함. 요일별 구성을 적용하면 로드 시에 당일 요일에 해당하는 pane이 자동으로 선택된다.</td>
 </tr>
 <tr>
 <td>monday-is-first</td>
@@ -521,6 +619,20 @@
 <td></td>
 <td>요일의 pane 데이터가 시작되는 네비게이션 상의 위치를 지정함. 1로 지정하면 두번째 pane 부터 차례대로 요일을 부여한다.</td>
 </tr>
+<tr>
+<td>shows-throbber</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>네비게이션을 통한 pane 간의 이동 시에 throbber를 보여주려면 yes를 지정함.</td>
+</tr>
+<tr>
+<td>bounces</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>pane 영역의 바운스 효과를 없애려면 no를 지정한다.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="_3">액션</h3>
@@ -534,27 +646,229 @@ else
 end
 </code></pre>
 <h3 id="_6">디바이스별 고려사항</h3>
-<p>메모리가 작은 디바이스 등에서 적은 리소스로 동작을 시키려면 싱글 모드를 사용해야 한다.</p>
+<p>메모리가 부족한 디바이스 등에서 적은 리소스로 동작을 시키려면 싱글 모드를 사용해야 한다.</p>
 <h2 id="banner">배너(Banner) 오브젝트</h2>
 <p>배너(Banner) 오브젝트란 한 개 이상의 배너 페이지를 자동으로 롤링하여 보여주는 콘테이너 오브젝트이다. 배너 오브젝트는 주로 화면 상단에 배치되어 광고용으로 사용된다. 배너 오브젝트에 포함된 배너 페이지를 셀(cell)이라고 하며, 각 셀의 내용은 sbml을 이용하여 표현한다. 여러 개의 셀이 자동으로 전환될 때의 시간 간격이나 효과 등을 지정할 수 있다. </p>
 <h3 id="_7">사용예</h3>
 <pre><code>=object banner: name="main", rotate-interval=1.0
 </code></pre>
-<h3 id="_8">외부 데이터를 사용하는 방법</h3>
-<p>Banner 오브젝트는 외부 데이터를 사용하여 셀의 내용을 채워넣는 기능을 지원한다. 외부 데이터는 웹(HTTP/S)을 통해 액세스 가능해야 하며, 요청에 대한 응답으로 json으로 표현된 데이터를 전송해야 한다. 웹 요청은 GET 메소드를 사용하며, 해당 배너의 모든 데이터를 한번에 포함하여 응답해야 한다. Banner 오브젝트에서 외부 데이터를 사용하려면 data-downloadable을 yes로 지정하고, data-url 속성에 외부 데이터의 URL을 지정하면 된다. </p>
+<h3 id="_8">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 이름. 로컬 데이터베이스의 banners 테이블에서 banner의 이름이 name인 항목을 가리킨다.</td>
+</tr>
+<tr>
+<td>alternate-name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">외부 데이터를 사용하는 방법</h3>
+<p>배너 오브젝트는 외부 데이터를 사용하여 셀의 내용을 채워넣는 기능을 지원한다. 외부 데이터는 웹(HTTP/S)을 통해 액세스 가능해야 하며, 요청에 대한 응답으로 json으로 표현된 데이터를 전송해야 한다. 웹 요청은 GET 메소드를 사용하며, 해당 배너의 모든 데이터를 한번에 포함하여 응답해야 한다. 배너 오브젝트에서 외부 데이터를 사용하려면 data-downloadable을 yes로 지정하고, data-url 속성에 외부 데이터의 URL을 지정하면 된다. </p>
 <pre><code>=object banner: name="ads", data-downloadable=yes, data-url="http://www.munhak.com/ads"
 </code></pre>
 <h2 id="showcase">쇼케이스(Showcase) 오브젝트</h2>
 <p>쇼케이스(Showcase) 오브젝트란 말그대로 진열장이다. 쇼케이스 오브젝트를 이용하여 여러 개의 상품이나 컨텐츠들을 늘어놓고 진열할 수 있다. 쇼케이스 오브젝트는 격자형 모양으로 상품들을 진열하는 데, 격자의 한 칸을 가리켜 셀(cell)이라고 하며, 각 셀은 sbml을 이용하여 표현한다. 쇼케이스 오브젝트는 고정 크기이거나 가로/세로 스크롤이 가능하도록 지정할 수 있다. 쇼케이스 오브젝트 내에 포함된 셀들은 정렬이 가능하며, 정렬의 기준은 sortkey와 sortorder 속성을 이용하여 변경할 수 있다. 쇼케이스 오브젝트는 헤더(header)와 푸터(footer), 툴바(toolbar)를 포함할 수 있는데, 이들의 내용은 각각 sbml로 표현한다. </p>
-<h3 id="_9">사용예</h3>
+<h3 id="_10">사용예</h3>
 <pre><code>=object showcase: name="magazine"
 </code></pre>
-<h3 id="_10">외부 데이터를 사용하는 방법</h3>
+<h3 id="_11">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 이름. 로컬 데이터베이스의 showcases 테이블에서 showcase의 이름이 name인 항목을 가리킨다.</td>
+</tr>
+<tr>
+<td>alternate-name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_12">외부 데이터를 사용하는 방법</h3>
 <p>쇼케이스 오브젝트는 외부 데이터를 사용하여 셀의 내용을 채워넣는 기능을 지원한다. 외부 데이터는 웹(HTTP/S)을 통해 액세스 가능해야 하며, 요청에 대한 응답으로 json으로 표현된 데이터를 전송해야 한다. 웹 요청은 POST 방식을 사용하며, 요청하는 데이터의 범위(시작위치, 갯수)를 파라미터로 전달할 수 있다. 요청받은 범위가 실제 데이터의 범위를 벗어나면, 빈 json 데이터와 함께 성공 응답(200)을 해야 한다. 데이터 범위를 파라미터로 전달하지 않으면, 모든 데이터를 한번에 포함하여 응답한다. 쇼케이스 오브젝트에서 외부 데이터를 사용하려면 data-downloadable을 yes로 지정하고, data-url 속성에 외부 데이터의 URL을 지정하면 된다. 쇼케이스 오브젝트에 Load more 기능이 활성화되어 있다면(loads-more=yes), 데이터의 범위를 지정하여 외부 데이터를 순차적으로 한 페이지씩 불러올 수 있다.</p>
 <pre><code>=object showcase: name="magazine", data-downloadable=yes, data-url="http://www.munhak.com/magazine", loads-more=yes
 </code></pre>
 <h2 id="cards">카드(Cards) 오브젝트</h2>
+<h3 id="_13">사용예</h3>
+<pre><code>=object cards: name="baseball"
+</code></pre>
+<h3 id="_14">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 이름. 로컬 데이터베이스의 collections 테이블에서 collection의 이름이 name인 항목을 가리킨다.</td>
+</tr>
+<tr>
+<td>alternate-name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="cell">셀(Cell) 오브젝트</h2>
+<h3 id="_15">사용예</h3>
+<pre><code>=object cards: display-unit="S_BOOKS_001"
+</code></pre>
+<h3 id="_16">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>display-unit</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 displayUnit 항목.</td>
+</tr>
+<tr>
+<td>alternate-name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+</tbody>
+</table>
           <aside class="copyright" role="note">
             
             Documentation built with
