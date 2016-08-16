@@ -438,6 +438,13 @@
 <td>데이터의 이름. 로컬 데이터베이스의 panes 테이블에서 panes의 이름이 name인 항목을 가리킨다.</td>
 </tr>
 <tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>데이터가 저장된 파일명. 파일의 포맷은 json 이어야 하며, 파일은 Texts 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
 <td>alternate-name</td>
 <td>String</td>
 <td>None</td>
@@ -672,6 +679,13 @@ end
 <td>데이터의 이름. 로컬 데이터베이스의 banners 테이블에서 banner의 이름이 name인 항목을 가리킨다.</td>
 </tr>
 <tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>데이터가 저장된 파일명. 파일의 포맷은 json 이어야 하며, 파일은 Texts 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
 <td>alternate-name</td>
 <td>String</td>
 <td>None</td>
@@ -698,6 +712,55 @@ end
 <td>None</td>
 <td></td>
 <td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+<tr>
+<td>data-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>데이터를 외부에서 다운로드하려면 yes를 지정한다.</td>
+</tr>
+<tr>
+<td>data-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>데이터를 다운로드 받을 URL. 이 때 다운로드되는 데이터의 형식은 json이어야 한다.</td>
+</tr>
+<tr>
+<td>data-path</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>다운로드한 데이터 중 셀이 사용할 데이터의 루트를 지정한다.</td>
+</tr>
+<tr>
+<td>data-key</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>다운로드한 데이터에서 id로 사용할 항목을 지정한다.</td>
+</tr>
+<tr>
+<td>transition-style</td>
+<td>slide / dissolve / cross-dissolve / none</td>
+<td>slide</td>
+<td></td>
+<td>배너의 트랜지션 효과.</td>
+</tr>
+<tr>
+<td>rotate-interval</td>
+<td>Float</td>
+<td>7</td>
+<td></td>
+<td>배너의 트랜지션 간격. 초단위로 지정한다.</td>
+</tr>
+<tr>
+<td>transition-duration</td>
+<td>Float</td>
+<td>0.3</td>
+<td></td>
+<td>트랜지션의 애니메이션 시간. 초단위로 지정한다.</td>
 </tr>
 <tr>
 <td>has-page-control</td>
@@ -765,7 +828,9 @@ end
 </tbody>
 </table>
 <h3 id="_9">액션</h3>
+<p>N/A</p>
 <h3 id="_10">이벤트</h3>
+<p>N/A</p>
 <h3 id="_11">외부 데이터를 사용하는 방법</h3>
 <p>배너 오브젝트는 외부 데이터를 사용하여 셀의 내용을 채워넣는 기능을 지원한다. 외부 데이터는 웹(HTTP/S)을 통해 액세스 가능해야 하며, 요청에 대한 응답으로 json으로 표현된 데이터를 전송해야 한다. 웹 요청은 GET 메소드를 사용하며, 해당 배너의 모든 데이터를 한번에 포함하여 응답해야 한다. 배너 오브젝트에서 외부 데이터를 사용하려면 data-downloadable을 yes로 지정하고, data-url 속성에 외부 데이터의 URL을 지정하면 된다. </p>
 <pre><code>=object banner: name="ads", data-downloadable=yes, data-url="http://www.munhak.com/ads"
@@ -1170,7 +1235,7 @@ end
 <td>String</td>
 <td>None</td>
 <td></td>
-<td>다운로드한 데이터에서 displayUnit의 id로 사용할 항목을 지정한다.</td>
+<td>다운로드한 데이터에서 id로 사용할 항목을 지정한다.</td>
 </tr>
 <tr>
 <td>loads-more</td>
@@ -1322,7 +1387,117 @@ end
 </tbody>
 </table>
 <h3 id="_14">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>쇼케이스를 다시 로드한다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>category={CATEGORY}</td>
+<td>카테고리를 변경한다.</td>
+</tr>
+<tr>
+<td>search</td>
+<td>keyword={KEYWORD}</td>
+<td>쇼케이스를 검색 모드로 변경하고, keyword가 지정되어 있다면 검색을 시작한다.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>sortkey={SORTKEY}, sortorder={SORTORDER}</td>
+<td>쇼케이스를 sortkey와 sortorder를 이용하여 정렬한다.</td>
+</tr>
+<tr>
+<td>appearance</td>
+<td>appearance={APPEARANCE}</td>
+<td>쇼케이스의 모양을 appearance의 값으로 변경한다.</td>
+</tr>
+<tr>
+<td>next-page</td>
+<td></td>
+<td>쇼케이스의 다음 페이지로 이동한다. 쇼케이스가 page-enabled=yes인 경우에 동작한다.</td>
+</tr>
+<tr>
+<td>prev-page</td>
+<td></td>
+<td>쇼케이스의 이전 페이지로 이동한다. 쇼케이스가 page-enabled=yes인 경우에 동작한다.</td>
+</tr>
+<tr>
+<td>edit</td>
+<td></td>
+<td>쇼케이스를 편집 모드로 전환한다.</td>
+</tr>
+<tr>
+<td>edit-done</td>
+<td></td>
+<td>쇼케이스의 편집 모드를 종료한다.</td>
+</tr>
+<tr>
+<td>select</td>
+<td>number={NUMBER}</td>
+<td>number로 지정된 셀을 선택한다.</td>
+</tr>
+<tr>
+<td>deselect</td>
+<td>number={NUMBER}</td>
+<td>number로 지정된 셀의 선택을 해제한다.</td>
+</tr>
+<tr>
+<td>select-all</td>
+<td></td>
+<td>모든 셀을 선택한다.</td>
+</tr>
+<tr>
+<td>deselect-all</td>
+<td></td>
+<td>모든 셀의 선택을 해제한다.</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>display-unit=${DISPLAY_UNIT}</td>
+<td>display-unit으로 지정된 셀을 삭제한다. 만약 display-unit이 지정되어 있지 않다면 현재 선택된 모든 셀을 삭제한다.</td>
+</tr>
+<tr>
+<td>shows-expiry</td>
+<td></td>
+<td>셀에 포함되어 있는 대여기간 라벨을 보여준다.</td>
+</tr>
+<tr>
+<td>hides-expiry</td>
+<td></td>
+<td>셀에 포함되어 있는 대여기간 라벨을 숨긴다.</td>
+</tr>
+<tr>
+<td>purchase</td>
+<td>points={POINTS}, product-key={KEY}</td>
+<td>쇼케이스의 모든 셀과 연관된 상품을 구매한다. 만약 쇼케이스가 편집 모드라면 현재 선택되어 있는 셀과 연관된 상품을 구매한다. 셀과 연관된 상품이란 셀의 데이터 중 product 항목을 가리킨다. 만약 product-key가 지정되어 있다면 셀의 데이터 중 product-key로 지정된 항목을 가리킨다. 이 때, points가 지정되어 있다면 구매시 지정된 points를 이용한다.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_15">이벤트</h3>
+<table>
+<thead>
+<tr>
+<th>이벤트 액션명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action-when-selected</td>
+<td>셀을 눌러 선택된 상태가 되었을 때 발생함.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_16">외부 데이터를 사용하는 방법</h3>
 <p>쇼케이스 오브젝트는 외부 데이터를 사용하여 셀의 내용을 채워넣는 기능을 지원한다. 외부 데이터는 웹(HTTP/S)을 통해 액세스 가능해야 하며, 요청에 대한 응답으로 json으로 표현된 데이터를 전송해야 한다. 웹 요청은 POST 방식을 사용하며, 요청하는 데이터의 범위(시작위치, 갯수)를 파라미터로 전달할 수 있다. 요청받은 범위가 실제 데이터의 범위를 벗어나면, 빈 json 데이터와 함께 성공 응답(200)을 해야 한다. 데이터 범위를 파라미터로 전달하지 않으면, 모든 데이터를 한번에 포함하여 응답한다. 쇼케이스 오브젝트에서 외부 데이터를 사용하려면 data-downloadable을 yes로 지정하고, data-url 속성에 외부 데이터의 URL을 지정하면 된다. 쇼케이스 오브젝트에 Load more 기능이 활성화되어 있다면(loads-more=yes), 데이터의 범위를 지정하여 외부 데이터를 순차적으로 한 묶음씩 불러올 수 있다.</p>
 <pre><code>=object showcase: name="magazine", data-downloadable=yes, data-url="http://www.munhak.com/magazine", loads-more=yes
@@ -1351,6 +1526,13 @@ end
 <td>데이터의 이름. 로컬 데이터베이스의 collections 테이블에서 collection의 이름이 name인 항목을 가리킨다.</td>
 </tr>
 <tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>데이터가 저장된 파일명. 파일의 포맷은 json 이어야 하며, 파일은 Texts 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
 <td>alternate-name</td>
 <td>String</td>
 <td>None</td>
@@ -1377,6 +1559,13 @@ end
 <td>None</td>
 <td></td>
 <td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+<tr>
+<td>cell-spacing</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>카드 셀 간의 간격.</td>
 </tr>
 <tr>
 <td>has-page-control</td>
@@ -1444,7 +1633,9 @@ end
 </tbody>
 </table>
 <h3 id="_19">액션</h3>
+<p>N/A</p>
 <h3 id="_20">이벤트</h3>
+<p>N/A</p>
 <h2 id="cell">셀(Cell) 오브젝트</h2>
 <h3 id="_21">사용예</h3>
 <pre><code>=object cell: display-unit="S_BOOKS_001"
@@ -1469,6 +1660,13 @@ end
 <td>데이터의 displayUnit 항목.</td>
 </tr>
 <tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>데이터가 저장된 파일명. 파일의 포맷은 json 이어야 하며, 파일은 Texts 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
 <td>alternate-name</td>
 <td>String</td>
 <td>None</td>
@@ -1483,23 +1681,46 @@ end
 <td>데이터가 포함되어 있는 카탈로그의 ID.</td>
 </tr>
 <tr>
-<td>subcatalog</td>
-<td>String</td>
-<td>None</td>
+<td>data-downloadable</td>
+<td>Boolean</td>
+<td>no</td>
 <td></td>
-<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+<td>데이터를 외부에서 다운로드하려면 yes를 지정한다.</td>
 </tr>
 <tr>
-<td>category</td>
+<td>data-url</td>
+<td>URL</td>
+<td>None</td>
+<td></td>
+<td>데이터를 다운로드 받을 URL. 이 때 다운로드되는 데이터의 형식은 json이어야 한다.</td>
+</tr>
+<tr>
+<td>data-path</td>
 <td>String</td>
 <td>None</td>
 <td></td>
-<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+<td>다운로드한 데이터 중 셀이 사용할 데이터의 루트를 지정한다.</td>
+</tr>
+<tr>
+<td>data-key</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>다운로드한 데이터에서 id로 사용할 항목을 지정한다.</td>
+</tr>
+<tr>
+<td>lazy-loading</td>
+<td>Boolean</td>
+<td>yes</td>
+<td></td>
+<td>셀이 화면에 보이는 즉시 셀을 활성화하려면 no를 지정한다.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="_23">액션</h3>
+<p>N/A</p>
 <h3 id="_24">이벤트</h3>
+<p>N/A</p>
           <aside class="copyright" role="note">
             
             Documentation built with
