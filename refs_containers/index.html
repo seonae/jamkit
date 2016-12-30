@@ -299,6 +299,15 @@
           
             
   <li>
+    <a class="" title="샘플" href="../samples/">
+      샘플
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
     <span class="section">참조문서</span>
     <ul>
       
@@ -351,6 +360,12 @@
             <li class="anchor">
               <a title="카드(Card) 오브젝트" href="#card">
                 카드(Card) 오브젝트
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="리스트(List) 오브젝트" href="#list">
+                리스트(List) 오브젝트
               </a>
             </li>
           
@@ -473,6 +488,20 @@
 <td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
 </tr>
 <tr>
+<td>number-of-panes</td>
+<td>Integer</td>
+<td>0</td>
+<td></td>
+<td>pane의 갯수. name으로 데이터를 지정하지 않을 때 사용함.</td>
+</tr>
+<tr>
+<td>pane-display-unit</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>name으로 데이터를 지정하지 않을 때 사용할 데이터의 displayUnit 항목.</td>
+</tr>
+<tr>
 <td>focused-pane</td>
 <td>String 혹은 Integer</td>
 <td>None</td>
@@ -534,20 +563,6 @@
 <td>bottom</td>
 <td></td>
 <td>툴바의 위치.</td>
-</tr>
-<tr>
-<td>number-of-panes</td>
-<td>Integer</td>
-<td>0</td>
-<td></td>
-<td>pane의 갯수. name으로 데이터를 지정하지 않을 때 사용함.</td>
-</tr>
-<tr>
-<td>pane-display-unit</td>
-<td>String</td>
-<td>None</td>
-<td></td>
-<td>name으로 데이터를 지정하지 않을 때 사용할 데이터의 displayUnit 항목.</td>
 </tr>
 <tr>
 <td>has-navibar</td>
@@ -643,6 +658,22 @@
 </tbody>
 </table>
 <h3 id="_3">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>오브젝트를 다시 로드한다.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_4">이벤트</h3>
 <h3 id="_5">선택된 셀의 표현 방법</h3>
 <p>네비게이션 바에서 현재 선택된 셀을 위한 sbml을 로딩할 때 선택된 상태를 나타내는 환경변수를 sbss에서 사용할 수 있다. 환경변수 이름은 $STATE이고 선택된 셀에는 $STATE의 값으로 "selected"가 지정된다. 따라서 아래와 같은 방법으로 sbss를 작성하면 선택된 셀에 특정 색상 값이나 이미지 등을 지정할 수 있다.</p>
@@ -828,7 +859,22 @@ end
 </tbody>
 </table>
 <h3 id="_9">액션</h3>
-<p>N/A</p>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>오브젝트를 다시 로드한다.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_10">이벤트</h3>
 <p>N/A</p>
 <h3 id="_11">외부 데이터를 사용하는 방법</h3>
@@ -1273,6 +1319,13 @@ end
 <td>셀이 화면에 보이는 즉시 셀을 활성화하려면 no를 지정한다.</td>
 </tr>
 <tr>
+<td>keeps-offscreen-cells</td>
+<td>Boolean</td>
+<td>no</td>
+<td></td>
+<td>화면 밖으로 사라진 셀을 보관하여 다시 화면에 나타날 때 재사용하려면 yes를 지정한다.</td>
+</tr>
+<tr>
 <td>page-enabled</td>
 <td>Boolean</td>
 <td>no</td>
@@ -1284,7 +1337,7 @@ end
 <td>String</td>
 <td>None</td>
 <td></td>
-<td>쇼케이스의 모양을 지정하는 임의의 값. 해당 값은 $APPEARANCE라는 환경변수를 통해 헤더, 푸타, 툴바 및 모든 셀에 전달된다.</td>
+<td>쇼케이스의 모양을 지정하는 임의의 값. 해당 값은 $APPEARANCE라는 환경변수를 통해 헤더, 푸터, 툴바 및 모든 셀에 전달된다.</td>
 </tr>
 <tr>
 <td>focused-cell</td>
@@ -1399,7 +1452,7 @@ end
 <tr>
 <td>reload</td>
 <td></td>
-<td>쇼케이스를 다시 로드한다.</td>
+<td>오브젝트를 다시 로드한다.</td>
 </tr>
 <tr>
 <td>category</td>
@@ -1475,6 +1528,11 @@ end
 <td>hides-expiry</td>
 <td></td>
 <td>셀에 포함되어 있는 대여기간 라벨을 숨긴다.</td>
+</tr>
+<tr>
+<td>open</td>
+<td>item=next/prev</td>
+<td>쇼케이스에 지정되어 있는 시리즈의 아이템 중 가장 최근에 읽은 아이템을 오픈한다. series-mode=yes일 때 동작한다. 만약 item을 next로 지정했다면 최근 아이템의 다음 아이템을 오픈하고, prev로 지정했다면 최근 아이템의 이전 아이템을 오픈한다.</td>
 </tr>
 <tr>
 <td>purchase</td>
@@ -1633,14 +1691,115 @@ end
 </tbody>
 </table>
 <h3 id="_19">액션</h3>
-<p>N/A</p>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>오브젝트를 다시 로드한다.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="_20">이벤트</h3>
 <p>N/A</p>
-<h2 id="cell">셀(Cell) 오브젝트</h2>
+<h2 id="list">리스트(List) 오브젝트</h2>
 <h3 id="_21">사용예</h3>
-<pre><code>=object cell: display-unit="S_BOOKS_001"
+<pre><code>=object list: name="booklist"
 </code></pre>
 <h3 id="_22">속성</h3>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>타입(허용값)</th>
+<th>기본값</th>
+<th>단위</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터의 이름. 로컬 데이터베이스의 collections 테이블에서 collection의 이름이 name인 항목을 가리킨다.</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>파일명</td>
+<td>None</td>
+<td></td>
+<td>데이터가 저장된 파일명. 파일의 포맷은 json 이어야 하며, 파일은 Texts 디렉토리에 들어있어야 한다.</td>
+</tr>
+<tr>
+<td>alternate-name</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>sbml 파일을 선택할 때 사용할 가상의 이름.</td>
+</tr>
+<tr>
+<td>catalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터가 포함되어 있는 카탈로그의 ID.</td>
+</tr>
+<tr>
+<td>subcatalog</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>특정 카테고리가 포함되어 있는 서브카탈로그의 값. category의 값과 함께 사용된다.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>String</td>
+<td>None</td>
+<td></td>
+<td>데이터에서 특정 카테고리만을 선택할 때 지정함.</td>
+</tr>
+<tr>
+<td>cell-spacing</td>
+<td>Float</td>
+<td>0</td>
+<td>dp, em, layout의 상대값</td>
+<td>리스트 셀 간의 간격.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_23">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>오브젝트를 다시 로드한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_24">이벤트</h3>
+<p>N/A</p>
+<h2 id="cell">셀(Cell) 오브젝트</h2>
+<h3 id="_25">사용예</h3>
+<pre><code>=object cell: display-unit="S_BOOKS_001"
+</code></pre>
+<h3 id="_26">속성</h3>
 <table>
 <thead>
 <tr>
@@ -1717,9 +1876,24 @@ end
 </tr>
 </tbody>
 </table>
-<h3 id="_23">액션</h3>
-<p>N/A</p>
-<h3 id="_24">이벤트</h3>
+<h3 id="_27">액션</h3>
+<table>
+<thead>
+<tr>
+<th>액션</th>
+<th>매개변수</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload</td>
+<td></td>
+<td>오브젝트를 다시 로드한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_28">이벤트</h3>
 <p>N/A</p>
           <aside class="copyright" role="note">
             
