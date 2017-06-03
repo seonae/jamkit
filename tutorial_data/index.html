@@ -413,8 +413,8 @@
 action=cancel, target=object, object=타이머오브젝트ID
 action=expire, target=object, object=타이머오브젝트ID
 </code></pre>
-<p>타이머의 동작 시간을 화면에 표시하고 싶다면 라벨 오브젝트를 사용하면 된다. 라벨 오브젝트의 type 속성을 time으로 지정하고 owner 속성에 타이머 오브젝트의 ID를 지정하면 지정된 타이머의 남은 시간이 라벨 오브젝트에 표시된다. </p>
-<pre><code>=object label: type=time, owner=타이머오브젝트ID
+<p>타이머의 동작 시간을 화면에 표시하고 싶다면 라벨 오브젝트를 사용하면 된다. 라벨 오브젝트의 type 속성을 timer로 지정하고 owner 속성에 타이머 오브젝트의 ID를 지정하면 지정된 타이머의 남은 시간이 라벨 오브젝트에 표시된다. </p>
+<pre><code>=object label: type=timer, owner=타이머오브젝트ID
 </code></pre>
 <p>라벨 오브젝트에 표시되는 기본 <a href="https://developer.android.com/reference/java/text/SimpleDateFormat.html">시간 표현 형식</a>은 HH:mm:ss이다. 만약 시간 표현 형식을 변경하려면 format 속성으로 지정하면 된다. </p>
 <pre><code>=object label: type=time, format='s초가 남았습니다.', ...
